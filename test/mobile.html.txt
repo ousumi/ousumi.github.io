@@ -328,8 +328,8 @@ window.onload = function(){
 	var t = {};
 	var i = 0;
 	for(i; i<12; i++){
-		t.level = $f["level"+i].value;
-		t.mobile = $f["mobile"+i].value;
+		t.level = getNumber($f["level"+i].value);
+		t.mobile = getNumber($f["mobile"+i].value);
 		if(!reCalc && !!(t.level*t.mobile)){ reCalc=true; }
 		$lines[i]={
 			level:t.level,
