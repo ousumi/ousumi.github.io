@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*
+ * 外部CSS、<style>、style属性をぬっころしたあとに残った
+ * body[background]やfont[color]などを無効化するためのCSS
+ */
+
+/* body[bgcolor],body[background],body[color] */
+body{
+	background: #eee !important;
+	color: #000 !important;
+	font-size: 100% !important;
+}
+
+/* body[link], body[vlink], body[alink] */
+a[href]:link{
+	color: #3100b2 !important;
+}
+a[href]:visited{
+	color: #bb53e7 !important;
+}
+a[href]:focus,
+a[href]:active,
+a[href]:hover{
+	color: #d94bc6 !important;
+}
+
+/* font[color], font[face], font[size] */
+font{
+	color: inherit !important;
+	font-family: inherit !important;
+	font-size: inherit !important;
+}
+
+/* table */
+table, th, td{
+	background: transparent !important;
+	color: inherit !important;
+}
+
+/* 他色々 */
+[align]{
+	text-align: left !important;
+}
+
+center{
+	text-align: left !important;
+}
+
+i{
+	font-style: normal !important;
+}
+
+u{
+	text-decoration: none !important;
+}
+
+hr{
+	visibilty: hidden !important;
+}
+
+/* history.back(1)とか */
+a[href^="javascript:"]:before{
+	display: inline;
+	content: "[js]";
+}
