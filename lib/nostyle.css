@@ -6,9 +6,17 @@
 
 /* body */
 body{
-	background: #eee !important;
+	box-sizing: content-box !important;
+	background: #efefee !important;
 	color: #000 !important;
 	font-size: 100% !important;
+	max-width: 900px !important;
+	border: 1px solid #ccc !important;
+	padding: 0.5em !important;
+	padding-bottom: 55% !important;/* 最終行を中央までスクロールできるようにする */
+	margin-top: 0.5em !important;
+	margin-left: 10em !important;
+	/*overflow: visible !important;*/
 }
 
 a[href]:link{
@@ -21,6 +29,11 @@ a[href]:focus,
 a[href]:active,
 a[href]:hover{
 	color: #d94bc6 !important;
+}
+
+a[name]:not([href]),
+a[name]:not([href]):hover{
+	color: inherit !important;
 }
 
 /* font */
